@@ -1,0 +1,31 @@
+{
+  "name": "miguel-semmodal",
+  "description": "Tailwind example starter project",
+  "scripts": {
+    "build": "parcel build public/index.html",
+    "startparcel": "parcel public/index.html --open",
+    "serve": "cross-env NODE_ENV=development concurrently   \"live-server ./public\"",
+    "development": "cross-env NODE_ENV=development postcss ",
+    "production": "cross-env NODE_ENV=production postcss",
+    "start": "npm run serve"
+  },
+  "dependencies": {
+    "autoprefixer": "10.2.4",
+    "jquery": "3.5.1",
+    "parcel-bundler": "1.12.4",
+    "postcss": "8.4.12"
+  },
+  "devDependencies": {
+    "concurrently": "4.1.0",
+    "cross-env": "5.2.0",
+    "gsap": "3.6.0",
+    "live-server": "1.2.1",
+    "locomotive-scroll": "4.1.0",
+    "postcss": "8.2.6",
+    "postcss-cli": "^8"
+  },
+  "keywords": [],
+  "resolutions": {
+    "@babel/preset-env": "7.13.8"
+  }
+}

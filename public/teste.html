@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
+
+    <title>Miguel Ferreira</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+    <!-- unpkg -->
+    <script src="https://unpkg.com/@barba/core"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        //darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              namePanel: "#18181b",
+              darkGray: "#1e1e1e"
+            }
+          }
+        }
+      };
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/ScrollToPlugin.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.js" id="external-js"></script>
+</head>
+
+  <!--<div class="container whitespace-nowrap m-4 overflow-hidden bg-gray-200">
+    <p class="m-0 p-0 inline-block text-4xl">
+      This is a much longer short sentence to illustrate that they are moving at
+      the same "rate".
+    </p>
+  </div>-->
+
+  <style>
+    .container {
+      white-space: nowrap;
+      margin: 0.5em;
+      overflow: hidden;
+    }
+    .container p {
+      display: inline-block;
+    }
+  </style>
+
+  <body class="text-black">
+    <div class="h-screen bg-gray-100 p-10">
+      <div
+        class="pt-6 pb-6 bg-white relative overflow-clip flex h-full items-center justify-center text-center"
+      >
+        <div
+          class="relative inline-table z-0 flex-col gap-4 text-6xl font-bold opacity-10"
+        >
+          <div class="container">
+            <div class="wrapper">
+              <p>
+                WINNER 🤩 WINNER 🤯 WINNER 🎉 WINNER ⭐️ WINNER 🚀
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="wrapper">
+              <p>
+                WINNER ⭐️ WINNER 🚀 WINNER 🎉 WINNER 🤩 WINNER 🤯
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="wrapper">
+              <p>
+                🤯 WINNER 🎉 WINNER 🤩 WINNER ⭐️ WINNER 🚀
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="absolute z-20 font-sans text-6xl font-extrabold text-gray-700"
+        >
+          WWDC Swift Student Challenge Winner
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // Rate = Distance over Time r=d/t
+    // If we want to define the rate, and
+    // the distance is determined,
+    // time will have to be variable
+
+    // We want to define the rate, and we can
+    // define that statically
+    r = 100;
+    adjustJank = 4; // Set this to 0 to see the jank I'm talking about ... this just adds to the distance animated to smooth out the seam
+
+    // Get the initial scroll elements and save them for later
+    const scrollElems = document.querySelectorAll(".container p");
+
+    // Adjust our tween based on the object and distance given
+    function adjustTween(obj, d) {
+      // Get the progress of the previous tween if it exists
+      let progress = 0;
+      if (obj.tween) {
+        progress = obj.tween.progress();
+        // Kill the previous tween
+        obj.tween.kill();
+      }
+
+      // r = d/t
+      // r*t = d
+      // t = d/r
+
+      // Set the proper time
+      var t = d / r;
+
+      // Create a new tween to animate our text so that it loops
+      // Make sure to save it to the object so we can refer to it later
+      obj.tween = gsap
+        .fromTo(
+          obj.parentElement,
+          { x: 0 },
+          {
+            duration: t,
+            x: "-" + (d + adjustJank),
+            ease: "linear",
+            repeat: -1
+          }
+        )
+        .progress(progress); // Set the progress of the new tween to the same value of
+      // the previous tween (if it exists) before it was killed
+    }
+
+    // Set up for what appears to be an seamless stream of text
+    // This could go in an init() function
+    scrollElems.forEach((obj, i) => {
+      var d = obj.offsetWidth;
+      var parent = obj.parentElement;
+      var clone = obj.cloneNode(true);
+      parent.appendChild(clone);
+      gsap.set(parent.parentElement, { width: d });
+
+      adjustTween(obj, d);
+    });
+
+    // Adjust widths and tweens on resize
+    window.addEventListener("resize", () => {
+      scrollElems.forEach((obj, i) => {
+        var d = obj.offsetWidth;
+        var parent = obj.parentElement;
+        gsap.set(parent.parentElement, { width: d });
+        adjustTween(obj, d);
+      });
+    });
+  </script>
+</html>
