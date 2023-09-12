@@ -103,7 +103,7 @@ gsap.to('.horizontal', {
   xPercent: 100,
   scrollTrigger: {
     trigger: '.horizontal',
-    start: 'center center',
+    start: 'center center -=200px',
     end: '+=3000px',
     pin: '.containerHorizontal',
     scrub: true,
