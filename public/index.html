@@ -156,6 +156,30 @@
     }
   </style>
 
+<!-- horizontal scroll section style -->
+  <style>
+div.section3 {
+  height: 60vh;
+  overflow: hidden;
+}
+
+.horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.horizontal > section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+  </style>
+
   <div class="loader dark:bg-darkGray bg-gray-100  flex items-center text-center justify-center">
     <div id="loaderText" class="p-10  dark:text-white text-black text-6xl font-extrabold">Home</div>
   </div>
@@ -233,6 +257,7 @@
 
     </div>
 
+  <div class="containerHorizontal">
     <!-- STARTS COMPLETO AND BLINKY -->
     <div class="mt-0 p-6 grid grid-cols-10">
       <div id="myCanva"
@@ -242,7 +267,7 @@
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
           <!-- Completo card -->
           <div style="background: linear-gradient(180deg, #151614 0%, #30322E 100%); max-height: 80vh"
-            class="completo_card cols-span-1 flex flex-col overflow-auto justify-between rounded-2xl border-4 border-gray-200 px-8 pt-8 dark:border-2 dark:border-zinc-800">
+            class="completo_card cols-span-1 overflow-clip flex flex-col justify-between rounded-2xl border-4 border-gray-200 px-8 pt-8 dark:border-2 dark:border-zinc-800">
             <!-- Header -->
             <div class="flex flex-row items-center gap-4 text-white">
               <div>
@@ -351,8 +376,7 @@
                     <div class="text-2xl font-bold">Blinky</div>
                   </div>
                   <!-- Subtitle -->
-                  <div class="px-8 pb-14 pt-4 text-white font-bold">Completo allows anyone to regain control of their lives. By
-                    linking apps to tasks and allowing you to block entire applications... Lorem ipsum</div>
+                  <div class="px-8 pb-14 pt-4 text-white font-bold">Lorem ipsum</div>
                 </div>
               </div>
               <!-- End Halo Build card -->
@@ -394,7 +418,81 @@
 
       </div>
     </div>
-    <!-- ENDS COMLPETO AND BLINKY -->
+    <!-- ENDS COMPLETO AND BLINKY -->
+
+
+    <!-- INTERACTIONS SECTION -->
+    <div class="mt-0 p-6 grid grid-cols-10">
+      <div id="myCanva"
+        class="z-20 h-full relative col-span-10 lg:col-start-2 lg:col-span-8 2xl:col-start-3 2xl:col-span-6">
+
+        <div class="section section3 bg-zinc-200 rounded-xl overflow-hidden border-4 border-zinc-300 shadow-2xl shadow-gray-500/50 dark:shadow-none">
+          <div class="horizontal p-10 rounded-lg flex gap-8">
+            <section class=" bg-pink-400 rounded-lg" style=" aspect-ratio: 1/1; max-height: 80vh; max-width: 80vw">
+              <div class="w-full h-full">
+                This is a test
+              </div>
+            </section>
+            <section class=" bg-pink-400 rounded-lg h-full" style="aspect-ratio: 1/1; max-height: 80vh">
+              <div class="w-full h-full">
+                This is a test
+              </div>
+            </section>
+            <section class=" bg-pink-400 rounded-lg h-full" style=" aspect-ratio: 1/1; max-height: 80vh">
+              <div class="w-full h-full">
+                This is a test
+              </div>
+            </section>
+            <section class=" bg-pink-400 rounded-lg h-full" style=" aspect-ratio: 1/1; max-height: 80vh">
+              <div class="w-full h-full">
+                This is a test
+              </div>
+            </section>
+            <section class=" bg-pink-400 rounded-lg h-full" style=" aspect-ratio: 1/1; max-height: 80vh">
+              <div class="w-full h-full">
+                This is a test
+              </div>
+            </section>
+            <section class=" bg-pink-400 rounded-lg h-full" style=" aspect-ratio: 1/1; max-height: 80vh">
+              <div class="w-full h-full">
+                This is a test
+              </div>
+            </section>
+            <section class=" bg-pink-400 rounded-lg h-full" style=" aspect-ratio: 1/1; max-height: 80vh">
+              <div class="w-full h-full">
+                This is a test
+              </div>
+            </section>
+            <section class=" bg-pink-400 rounded-lg h-full" style=" aspect-ratio: 1/1; max-height: 80vh">
+              <div class="w-full h-full">
+                This is a test
+              </div>
+            </section>
+            <section class=" bg-pink-400 rounded-lg h-full" style=" aspect-ratio: 1/1; max-height: 80vh">
+              <div class="w-full h-full">
+                This is a test
+              </div>
+            </section>
+            <section class=" bg-pink-400 rounded-lg h-full" style=" aspect-ratio: 1/1; max-height: 80vh">
+              <div class="w-full h-full">
+                This is a test
+              </div>
+            </section>
+            <section class=" bg-pink-400 rounded-lg h-full" style=" aspect-ratio: 1/1; max-height: 80vh">
+              <div class="w-full h-full">
+                This is a test
+              </div>
+            </section>
+            <section class=" bg-pink-400 rounded-lg h-full" style=" aspect-ratio: 1/1; max-height: 80vh">
+              <div class="w-full h-full">
+                This is a test
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ENDS INTERACTIONS SECTION -->
 
     <div class="mt-0 p-6 grid grid-cols-10">
       <div id="myCanva"
@@ -449,7 +547,7 @@
         </div>
       </div>
     </div>
-
+  </div>
 
     <div class="md:-ml-10 lg:ml-0  p-0 text-black dark:text-white">
       <div class="safariClipIncompatibility">
@@ -481,7 +579,7 @@
 
           <div
             class="px-5 md:px-16 lg:px-24 text-5xl lg:text-6xl  absolute z-20 font-sans font-extrabold text-zinc-700 dark:text-white">
-            <span class="p-2 bg-zinc-200 rounded-xl">Twice</span> WWDC Swift Student Challenge Winner
+            <span class="p-2 px-4 dark:bg-zinc-800 bg-zinc-200 rounded-xl">Twice</span> WWDC Swift Student Challenge Winner
           </div>
         </div>
       </div>
