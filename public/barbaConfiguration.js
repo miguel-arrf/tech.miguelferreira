@@ -52,8 +52,12 @@ function init() {
     );
   }
 
+
+
+
   // do something before the transition starts
   barba.hooks.before((data) => {
+
     const loaderText = document.getElementById("loaderText");
     loaderText.textContent = data.trigger.getAttribute("nextPageText");
 
