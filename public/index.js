@@ -4,6 +4,7 @@ gsap.registerPlugin();
 // create the scrollSmoother before your scrollTriggers
 ScrollSmoother.create({
   smooth: 0.8,               // how long (in seconds) it takes to "catch up" to the native scroll position
+  smoothTouch: true,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
 });
 
 /*ScrollTrigger.normalizeScroll({
