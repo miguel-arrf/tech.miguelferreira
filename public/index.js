@@ -2,6 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin();
 
 
+ScrollTrigger.normalizeScroll(true); // enable
 
 function circles() {
   gsap.to("#secondCircle", {
@@ -87,7 +88,7 @@ console.log("horizontalSection.scrollWidth: ", horizontalSection.scrollWidth)
 
 
 
-/*gsap.to('.horizontal', {
+gsap.to('.horizontal', {
   x: () => horizontalSection.scrollWidth * -1,
   xPercent: 100,
   scrollTrigger: {
@@ -106,7 +107,7 @@ console.log("horizontalSection.scrollWidth: ", horizontalSection.scrollWidth)
     },
   },
   ease: "power1.inOut" // Add this line 👍
-})*/
+})
 
 
 
@@ -115,4 +116,3 @@ console.log("horizontalSection.scrollWidth: ", horizontalSection.scrollWidth)
   smooth: true,
   direction: "vertical"
 }) */
-
