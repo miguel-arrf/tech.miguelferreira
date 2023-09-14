@@ -63,131 +63,20 @@
 
 </head>
 
-<body class=" dark:bg-black bg-gray-100 transition-all " data-barba="wrapper">
+<body class=" dark:bg-black bg-gray-100  " data-barba="wrapper">
   <div id="smooth-wrapper">
     <div id="smooth-content">
-      <style>
-        #smooth-content {
-  will-change: transform;
-}
-        .customLargeSectionBackground {
-          background-color: rgba(242, 153, 74, 0.1);
-          background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.2'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-
-        .customPatternBackground {
-          background-color: #18181B;
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-
-
-        .safariClipIncompatibility {
-          overflow: hidden;
-          max-width: 100vw;
-        }
-
-        .container {
-          white-space: nowrap;
-          margin-top: 0.5em;
-          margin-bottom: 0.5em;
-        }
-
-        .container p {
-          display: inline-block;
-        }
-
-
-        .loader {
-          position: fixed;
-          width: 100vw;
-          height: 120vh;
-          pointer-events: none;
-          z-index: 100;
-          visibility: hidden;
-          opacity: 0;
-        }
-
-
-        .myText {
-          font-family: "Lora", serif;
-        }
-
-        .testeMeu {
-          width: 100%;
-          height: 100%;
-
-          background-image: linear-gradient(rgba(255, 255, 255, 0.03) 0.1em,
-              transparent 0.1em),
-            linear-gradient(90deg,
-              rgba(255, 255, 255, 0.03) 0.1em,
-              transparent 0.1em);
-          background-size: 3em 3em;
-        }
-
-        .cursor {
-          position: fixed;
-          pointer-events: none;
-          opacity: 0;
-        }
-
-        .cursor-eye {
-          top: -40px;
-          left: -40px;
-          padding: 10px;
-          width: 50px;
-          height: 50px;
-          z-index: 200;
-          text-align: center;
-          border-radius: 50%;
-          background-color: rgba(255, 255, 255, 0.2);
-          backdrop-filter: blur(10px);
-          -webkit-backdrop-filter: blur(10px);
-        }
-
-        .content {
-          padding: 0 18px;
-          background-color: white;
-          max-height: 0;
-          overflow: hidden;
-          transition: max-height 0.2s ease-out;
-        }
-      </style>
-
-      <!-- horizontal scroll section style -->
-      <style>
-        div.section3 {
-          height: 60vh;
-          overflow: hidden;
-        }
-
-        .horizontal {
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-          height: 100%;
-        }
-
-        .horizontal>section {
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          justify-content: center;
-          flex-shrink: 0;
-        }
-      </style>
-
-      <div class="loader dark:bg-darkGray bg-gray-100  flex items-center text-center justify-center">
-        <div id="loaderText" class="p-10  dark:text-white text-black text-6xl font-extrabold">Home</div>
-      </div>
+  
+   
+  
 
 
 
-
-      <main class="smoothContent transition-all dark:bg-black bg-gray-100 transition-all md:px-10 lg:px-0"
+      <main class="smoothContent  dark:bg-black bg-gray-100  md:px-10 lg:px-0"
         data-barba="container" data-barba-namespace="home">
 
         <a href="blogs/" nextPageText="Blogs"
-          class="fixed bottom-0 right-0 z-50 m-6 rounded-xl backdrop-blur-2xl bg-zinc-200/50 dark:bg-zinc-700/60 p-4 text-white hover:rotate-1 transition-all hover:scale-105 border border-zinc-300 dark:border-zinc-600">
+          class="fixed bottom-0 right-0 z-50 m-6 rounded-xl backdrop-blur-2xl bg-zinc-200/50 dark:bg-zinc-700/60 p-4 text-white hover:rotate-1  hover:scale-105 border border-zinc-300 dark:border-zinc-600">
           <div class="flex gap-3">
             <div
               class="center rounded-full bg-gradient-to-b from-blue-200 to-blue-500 p-3 shadow-lg shadow-blue-300 dark:shadow-blue-600/50">
@@ -207,14 +96,14 @@
         <div class="text-white p-4 flex justify-center place-items-center gap-3 md:gap-5 flex-wrap">
 
           <div onclick="gsap.to(window, {duration: 1, scrollTo: 0});"
-            class="cursor-default text-sm mt-6 dark:border-0 border-gray-300 border-2 bg-gray-200 font-mono flex flex-row shrink-0 tracking-widest gap-1.5 place-items-center rounded-lg px-1 py-0.5 font-bold text-gray-500 bg-gray-100 bg-opacity-100 dark:bg-opacity-10 transition-all hover:bg-opacity-100 hover:shadow-gray-300/20 hover:shadow-xl hover:scale-105 hover:-rotate-2">
+            class="cursor-default text-sm mt-6 dark:border-0 border-gray-300 border-2 bg-gray-200 font-mono flex flex-row shrink-0 tracking-widest gap-1.5 place-items-center rounded-lg px-1 py-0.5 font-bold text-gray-500 bg-gray-100 bg-opacity-100 dark:bg-opacity-10  hover:bg-opacity-100 hover:shadow-gray-300/20 hover:shadow-xl hover:scale-105 hover:-rotate-2">
             Miguel Ferreira
           </div>
 
 
 
           <button onclick="gsap.to(window, {duration: 1, scrollTo: '#projectsSection'});"
-            class="text-sm mt-6 border-2 dark:border-0 border-green-200 font-mono flex flex-row tracking-widest gap-1.5 place-items-center rounded-lg px-1 py-0.5 font-bold text-green-500 bg-green-100 bg-opacity-100 dark:bg-opacity-10 transition-all hover:bg-opacity-100 hover:shadow-green-300/20 hover:shadow-xl hover:scale-105 hover:-rotate-2">
+            class="text-sm mt-6 border-2 dark:border-0 border-green-200 font-mono flex flex-row tracking-widest gap-1.5 place-items-center rounded-lg px-1 py-0.5 font-bold text-green-500 bg-green-100 bg-opacity-100 dark:bg-opacity-10  hover:bg-opacity-100 hover:shadow-green-300/20 hover:shadow-xl hover:scale-105 hover:-rotate-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" />
             </svg>
@@ -222,7 +111,7 @@
           </button>
 
           <a href="blogs/" nextPageText="Blogs"
-            class="text-sm hover:text-purple-500 mt-6 border-2 dark:border-0 border-purple-200 font-mono flex flex-row tracking-widest gap-1.5 place-items-center rounded-lg px-1 py-0.5 font-bold text-purple-500 bg-purple-100 bg-opacity-100 dark:bg-opacity-10 transition-all hover:bg-opacity-100 hover:shadow-purple-300/20 hover:shadow-xl hover:scale-105 hover:-rotate-2">
+            class="text-sm hover:text-purple-500 mt-6 border-2 dark:border-0 border-purple-200 font-mono flex flex-row tracking-widest gap-1.5 place-items-center rounded-lg px-1 py-0.5 font-bold text-purple-500 bg-purple-100 bg-opacity-100 dark:bg-opacity-10  hover:bg-opacity-100 hover:shadow-purple-300/20 hover:shadow-xl hover:scale-105 hover:-rotate-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" />
             </svg>
@@ -230,7 +119,7 @@
           </a>
 
           <button onclick="gsap.to(window, {duration: 1, scrollTo: '#aboutSection'});"
-            class="text-sm mt-6 font-mono border-2 dark:border-0 border-blue-200 flex flex-row tracking-widest gap-1.5 place-items-center rounded-lg px-1 py-0.5 font-bold text-blue-500 bg-blue-100 bg-opacity-100 dark:bg-opacity-10 transition-all hover:bg-opacity-100 hover:shadow-blue-300/20 hover:shadow-xl hover:scale-105 hover:rotate-2">
+            class="text-sm mt-6 font-mono border-2 dark:border-0 border-blue-200 flex flex-row tracking-widest gap-1.5 place-items-center rounded-lg px-1 py-0.5 font-bold text-blue-500 bg-blue-100 bg-opacity-100 dark:bg-opacity-10  hover:bg-opacity-100 hover:shadow-blue-300/20 hover:shadow-xl hover:scale-105 hover:rotate-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd"
                 d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z"
@@ -240,7 +129,7 @@
           </button>
 
           <button onclick="gsap.to(window, {duration:1, scrollTo: '#contacts'});"
-            class="text-sm mt-6 font-mono border-2 dark:border-0 border-orange-200 flex flex-row tracking-widest gap-1.5 place-items-center rounded-lg px-1 py-0.5 font-bold text-yellow-500 bg-yellow-100 bg-opacity-100 dark:bg-opacity-10 transition-all hover:bg-opacity-100 hover:shadow-yellow-300/20 hover:shadow-xl hover:scale-105 hover:rotate-2">
+            class="text-sm mt-6 font-mono border-2 dark:border-0 border-orange-200 flex flex-row tracking-widest gap-1.5 place-items-center rounded-lg px-1 py-0.5 font-bold text-yellow-500 bg-yellow-100 bg-opacity-100 dark:bg-opacity-10  hover:bg-opacity-100 hover:shadow-yellow-300/20 hover:shadow-xl hover:scale-105 hover:rotate-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd"
                 d="M18 3a1 1 0 00-1.447-.894L8.763 6H5a3 3 0 000 6h.28l1.771 5.316A1 1 0 008 18h1a1 1 0 001-1v-4.382l6.553 3.276A1 1 0 0018 15V3z"
@@ -379,20 +268,20 @@
             <div class=" font-bold text-gray-400 dark:text-gray-300 leading-relaxed" style="line-height: 1.6">
 
               <div
-                class="pinAnimation absolute  right-3 top-2  rounded-full bg-red-100  dark:bg-opacity-10 w-7 text-center hover:scale-105 hover:bg-opacity-30 transition-all hover:rotate-12">
+                class="pinAnimation absolute  right-3 top-2  rounded-full bg-red-100  dark:bg-opacity-10 w-7 text-center hover:scale-105 hover:bg-opacity-30  hover:rotate-12">
                 📍</div>
 
 
               I'm Miguel Ferreira, and I am currently in the first year of my Master's in Computer Science and
               Engineering
               <span
-                class="inline-block text-base px-1 font-bold text-blue-500 bg-blue-100 bg-opacity-100 dark:bg-opacity-10 transition-all hover:bg-opacity-100 hover:shadow-blue-300/20 hover:shadow-xl hover:scale-105 hover:rotate-2 rounded-lg">
+                class="inline-block text-base px-1 font-bold text-blue-500 bg-blue-100 bg-opacity-100 dark:bg-opacity-10  hover:bg-opacity-100 hover:shadow-blue-300/20 hover:shadow-xl hover:scale-105 hover:rotate-2 rounded-lg">
                 @Instituto Superior Técnico</span>. I've just finished working on a research project <span
-                class="rounded-lg inline-block text-base px-1 text-green-500 bg-green-100 bg-opacity-100 dark:bg-opacity-10 transition-all hover:bg-opacity-100 hover:shadow-green-300/20 hover:shadow-xl hover:scale-105 hover:-rotate-2">@ISTAR-IUL</span>
+                class="rounded-lg inline-block text-base px-1 text-green-500 bg-green-100 bg-opacity-100 dark:bg-opacity-10  hover:bg-opacity-100 hover:shadow-green-300/20 hover:shadow-xl hover:scale-105 hover:-rotate-2">@ISTAR-IUL</span>
               to build an interactive shape grammar editor. <br /><br />
 
               Last summer I did a Summer internship at <span
-                class="inline-block text-base px-1 font-bold text-red-500 bg-red-100 bg-opacity-100 dark:bg-opacity-10 transition-all hover:bg-opacity-100 hover:shadow-red-300/20 hover:shadow-xl hover:scale-105 hover:rotate-2 rounded-lg">EDP
+                class="inline-block text-base px-1 font-bold text-red-500 bg-red-100 bg-opacity-100 dark:bg-opacity-10  hover:bg-opacity-100 hover:shadow-red-300/20 hover:shadow-xl hover:scale-105 hover:rotate-2 rounded-lg">EDP
                 - Digital Global Unit</span> where I created a framework for measuring corporate ethics in Artificial
               Intelligence models.
 
@@ -402,12 +291,12 @@
               something that could bring together my love for
 
               <span
-                class="inline-block text-base px-1 font-bold text-pink-500 bg-pink-100 bg-opacity-100 dark:bg-opacity-10 transition-all hover:bg-opacity-100 hover:shadow-pink-300/20 hover:shadow-xl hover:scale-105 hover:-rotate-2 rounded-lg">Design</span>,
+                class="inline-block text-base px-1 font-bold text-pink-500 bg-pink-100 bg-opacity-100 dark:bg-opacity-10  hover:bg-opacity-100 hover:shadow-pink-300/20 hover:shadow-xl hover:scale-105 hover:-rotate-2 rounded-lg">Design</span>,
               <span
-                class="inline-block text-base px-1 font-bold text-blue-500 bg-blue-100 bg-opacity-100 dark:bg-opacity-10 transition-all hover:bg-opacity-100 hover:shadow-blue-300/20 hover:shadow-xl hover:scale-105 hover:rotate-2 rounded-lg">
+                class="inline-block text-base px-1 font-bold text-blue-500 bg-blue-100 bg-opacity-100 dark:bg-opacity-10  hover:bg-opacity-100 hover:shadow-blue-300/20 hover:shadow-xl hover:scale-105 hover:rotate-2 rounded-lg">
                 Data Science</span> and
               <span
-                class="inline-block text-base px-1 font-bold text-yellow-500 bg-yellow-100 bg-opacity-100 dark:bg-opacity-10 transition-all hover:bg-opacity-100 hover:shadow-yellow-300/20 hover:shadow-xl hover:scale-105 hover:-rotate-2 rounded-lg">
+                class="inline-block text-base px-1 font-bold text-yellow-500 bg-yellow-100 bg-opacity-100 dark:bg-opacity-10  hover:bg-opacity-100 hover:shadow-yellow-300/20 hover:shadow-xl hover:scale-105 hover:-rotate-2 rounded-lg">
                 Artificial Intelligence</span>
             </div>
           </div>
@@ -510,7 +399,7 @@
               <!-- MLP -->
               <a href="naturalLanguage/" nextPageText="Natural Language Processing 📚‍" style="z-index:1" class="flex">
                 <div
-                  class="relative flex w-full flex-col place-content-center overflow-hidden rounded-2xl bg-green-400 bg-opacity-80 bg-gradient-to-br from-green-300 to-green-500 p-6 text-white transition-all hover:rotate-1 hover:scale-105 hover:shadow-xl hover:shadow-green-300 dark:hover:shadow-green-900">
+                  class="relative flex w-full flex-col place-content-center overflow-hidden rounded-2xl bg-green-400 bg-opacity-80 bg-gradient-to-br from-green-300 to-green-500 p-6 text-white  hover:rotate-1 hover:scale-105 hover:shadow-xl hover:shadow-green-300 dark:hover:shadow-green-900">
                   <div
                     class="z-30 w-fit rounded-xl bg-green-300 px-1 text-xl font-bold italic text-white shadow-md shadow-green-500/10">
                     Natural Language Processing(20 out of 20)</div>
@@ -531,7 +420,7 @@
               <a href="complexScienceNetworks/" nextPageText="Complex Science Networks 🗺" style="z-index:1"
                 class="flex">
                 <div
-                  class="relative flex w-full flex-col place-content-center overflow-hidden rounded-2xl bg-blue-400 bg-opacity-80 bg-gradient-to-br from-blue-300 to-blue-500 p-6 text-white transition-all hover:rotate-1 hover:scale-105 hover:shadow-xl hover:shadow-blue-300 dark:hover:shadow-blue-900">
+                  class="relative flex w-full flex-col place-content-center overflow-hidden rounded-2xl bg-blue-400 bg-opacity-80 bg-gradient-to-br from-blue-300 to-blue-500 p-6 text-white  hover:rotate-1 hover:scale-105 hover:shadow-xl hover:shadow-blue-300 dark:hover:shadow-blue-900">
                   <div
                     class="z-30 w-fit rounded-lg bg-blue-300 px-1 text-xl font-bold italic text-white shadow-md shadow-blue-500/10">
                     Complex Science Networks (19.8 out of 20)</div>
@@ -553,7 +442,7 @@
               <!-- DEEP LEARNING -->
               <a href="deepLearning/" nextPageText="Deep Learning 🤯" style="z-index:1" class="flex">
                 <div
-                  class="relative flex w-full flex-col place-content-center overflow-hidden rounded-2xl bg-orange-400 bg-opacity-80 bg-gradient-to-br from-orange-300 to-orange-500 p-6 text-white transition-all hover:rotate-1 hover:scale-105 hover:shadow-xl hover:shadow-orange-300 dark:hover:shadow-orange-900">
+                  class="relative flex w-full flex-col place-content-center overflow-hidden rounded-2xl bg-orange-400 bg-opacity-80 bg-gradient-to-br from-orange-300 to-orange-500 p-6 text-white  hover:rotate-1 hover:scale-105 hover:shadow-xl hover:shadow-orange-300 dark:hover:shadow-orange-900">
                   <div
                     class="z-10 w-fit rounded-lg bg-orange-300 px-1 text-xl font-bold italic text-white shadow-md shadow-orange-500/10">
                     Deep Learning (19.9 out of 20)</div>
@@ -571,7 +460,7 @@
               <!-- IMF -->
               <a href="introductionToMathematicalFinance/" nextPageText="Wow! 📈" style="z-index:1" class="flex">
                 <div
-                  class="relative flex w-full flex-col place-content-center overflow-hidden rounded-2xl bg-red-400 bg-opacity-80 bg-gradient-to-br from-red-300 to-red-500 p-6 text-white transition-all hover:rotate-1 hover:scale-105 hover:shadow-xl hover:shadow-red-300 dark:hover:shadow-red-900">
+                  class="relative flex w-full flex-col place-content-center overflow-hidden rounded-2xl bg-red-400 bg-opacity-80 bg-gradient-to-br from-red-300 to-red-500 p-6 text-white  hover:rotate-1 hover:scale-105 hover:shadow-xl hover:shadow-red-300 dark:hover:shadow-red-900">
                   <div
                     class="z-30 w-fit rounded-lg bg-red-300 px-1 text-xl font-bold italic text-white shadow-md shadow-red-500/10">
                     Introduction to Mathematical Finance (17 out of 20)</div>
@@ -592,7 +481,7 @@
               <!-- DATA SCIENCE -->
               <a href="dataScience/" nextPageText="Data Science 🧑‍🔬" style="z-index:1" class="flex">
                 <div
-                  class="relative flex w-full flex-col place-content-center overflow-hidden rounded-2xl bg-purple-400 bg-opacity-80 bg-gradient-to-br from-purple-300 to-purple-500 p-6 text-white transition-all hover:rotate-1 hover:scale-105 hover:shadow-xl hover:shadow-purple-300 dark:hover:shadow-purple-900">
+                  class="relative flex w-full flex-col place-content-center overflow-hidden rounded-2xl bg-purple-400 bg-opacity-80 bg-gradient-to-br from-purple-300 to-purple-500 p-6 text-white  hover:rotate-1 hover:scale-105 hover:shadow-xl hover:shadow-purple-300 dark:hover:shadow-purple-900">
                   <div
                     class="z-30 w-fit rounded-xl bg-purple-300 px-1 text-xl font-bold italic text-white shadow-md shadow-purple-500/10">
                     Data Science (17 out of 20)</div>
@@ -614,7 +503,7 @@
               <a href="parallelAndDistributedComputing/" nextPageText="Battle of the machines! 👾" style="z-index:1"
                 class="flex">
                 <div
-                  class="relative flex w-full flex-col place-content-center overflow-hidden rounded-2xl bg-teal-400 bg-opacity-80 bg-gradient-to-br from-teal-300 to-teal-500 p-6 text-white transition-all hover:rotate-1 hover:scale-105 hover:shadow-xl hover:shadow-teal-300 dark:hover:shadow-teal-900">
+                  class="relative flex w-full flex-col place-content-center overflow-hidden rounded-2xl bg-teal-400 bg-opacity-80 bg-gradient-to-br from-teal-300 to-teal-500 p-6 text-white  hover:rotate-1 hover:scale-105 hover:shadow-xl hover:shadow-teal-300 dark:hover:shadow-teal-900">
                   <div
                     class="z-30 w-fit rounded-lg bg-teal-300 px-1 text-xl font-bold italic text-white shadow-md shadow-teal-500/10">
                     Parallel and Distributed Computing (18 out of 20)</div>
@@ -749,13 +638,13 @@
     <div
       class="mx-6 group relative col-span-10 flex lg:col-span-8 lg:col-start-2 lg:mx-5 xl:mx-4 2xl:col-span-6 2xl:col-start-3">
       <div
-        class="opacity-0 absolute h-40 w-full scale-y-105 translate-y-4 rotate-[0.5deg] transform rounded-xl border-4 border-zinc-600 bg-zinc-700 shadow-2xl transition-all group-hover:translate-y-3 group-hover:rotate-0">
+        class="opacity-0 absolute h-40 w-full scale-y-105 translate-y-4 rotate-[0.5deg] transform rounded-xl border-4 border-zinc-600 bg-zinc-700 shadow-2xl  group-hover:translate-y-3 group-hover:rotate-0">
       </div>
       <div
-        class="opacity-0 absolute h-40 w-full scale-y-105 translate-y-3 -rotate-[0.5deg] transform rounded-xl border-4 border-zinc-600 bg-zinc-700 shadow-2xl transition-all group-hover:translate-y-2 group-hover:rotate-0">
+        class="opacity-0 absolute h-40 w-full scale-y-105 translate-y-3 -rotate-[0.5deg] transform rounded-xl border-4 border-zinc-600 bg-zinc-700 shadow-2xl  group-hover:translate-y-2 group-hover:rotate-0">
       </div>
       <div
-        class="opacity-0 absolute h-40 w-full scale-y-105 translate-y-2 rotate-[0.5deg] transform rounded-xl border-4 border-zinc-600 bg-zinc-700 shadow-2xl transition-all group-hover:translate-y-1 group-hover:rotate-0">
+        class="opacity-0 absolute h-40 w-full scale-y-105 translate-y-2 rotate-[0.5deg] transform rounded-xl border-4 border-zinc-600 bg-zinc-700 shadow-2xl  group-hover:translate-y-1 group-hover:rotate-0">
       </div>
       <!-- 1 -->
       <div class="z-10 col-span-10 w-full rounded-xl bg-white p-10 shadow-sm dark:bg-namePanel">
@@ -767,9 +656,9 @@
 
               <div class="mt-4 flex flex-row justify-center gap-5">
                 <a href="mailto: mferreira.oeiras@gmail.com"
-                  class="text-yellow-200 flex h-10 w-10 items-center justify-center rounded-lg border-2 border-yellow-300 bg-yellow-600 fill-transparent stroke-yellow-600 p-1.5 font-extrabold transition-all hover:rotate-2 hover:scale-105 hover:bg-yellow-600 hover:bg-opacity-100 hover:fill-yellow-600 hover:shadow-xl hover:shadow-yellow-600/20 dark:bg-yellow-300 dark:bg-opacity-10 dark:hover:bg-yellow-600 dark:hover:bg-opacity-100">@</a>
+                  class="text-yellow-200 flex h-10 w-10 items-center justify-center rounded-lg border-2 border-yellow-300 bg-yellow-600 fill-transparent stroke-yellow-600 p-1.5 font-extrabold  hover:rotate-2 hover:scale-105 hover:bg-yellow-600 hover:bg-opacity-100 hover:fill-yellow-600 hover:shadow-xl hover:shadow-yellow-600/20 dark:bg-yellow-300 dark:bg-opacity-10 dark:hover:bg-yellow-600 dark:hover:bg-opacity-100">@</a>
                 <a href="https://linkedin.com/in/marrf"
-                  class="text-blue-200 flex h-10 w-10 items-center justify-center rounded-lg border-2 border-blue-300 bg-blue-600 fill-transparent stroke-blue-600 p-1.5 transition-all hover:rotate-2 hover:scale-105 hover:bg-blue-600 hover:bg-opacity-100 hover:fill-blue-600 hover:shadow-xl hover:shadow-blue-600/20 dark:bg-blue-300 dark:bg-opacity-10 dark:hover:bg-blue-600 dark:hover:bg-opacity-100">
+                  class="text-blue-200 flex h-10 w-10 items-center justify-center rounded-lg border-2 border-blue-300 bg-blue-600 fill-transparent stroke-blue-600 p-1.5  hover:rotate-2 hover:scale-105 hover:bg-blue-600 hover:bg-opacity-100 hover:fill-blue-600 hover:shadow-xl hover:shadow-blue-600/20 dark:bg-blue-300 dark:bg-opacity-10 dark:hover:bg-blue-600 dark:hover:bg-opacity-100">
                   <i class="fa fa-linkedin w-7"></i>
                 </a>
               </div>
@@ -787,13 +676,13 @@
       class="relative col-span-10 mx-6 rounded-xl lg:col-span-8 lg:col-start-2 lg:mx-5 xl:mx-4 2xl:col-span-6 2xl:col-start-3">
       <div class="flex flex-row items-center justify-between">
         <div
-          class="byeAnimation rounded-lg border-2 border-gray-300 bg-gray-200 px-1.5 font-extrabold text-gray-500 transition-all hover:-rotate-2 hover:scale-105 hover:bg-opacity-100 hover:shadow-xl hover:shadow-gray-300/20 dark:border-0 dark:bg-zinc-500 dark:bg-opacity-0 dark:text-white dark:hover:shadow-zinc-800">
+          class="byeAnimation rounded-lg border-2 border-gray-300 bg-gray-200 px-1.5 font-extrabold text-gray-500  hover:-rotate-2 hover:scale-105 hover:bg-opacity-100 hover:shadow-xl hover:shadow-gray-300/20 dark:border-0 dark:bg-zinc-500 dark:bg-opacity-0 dark:text-white dark:hover:shadow-zinc-800">
           MiguelFerreira.</div>
 
         <div class="flex gap-4 text-center text-white">
           <a href="https://github.com/miguel-arrf">
             <div
-              class="rounded-lg bg-white fill-transparent stroke-black p-2 transition-all hover:-rotate-2 hover:scale-105 hover:bg-opacity-100 hover:stroke-black hover:shadow-xl hover:shadow-gray-300/20 dark:bg-gray-100 dark:bg-opacity-10 dark:stroke-gray-300 dark:hover:bg-white dark:hover:stroke-black">
+              class="rounded-lg bg-white fill-transparent stroke-black p-2  hover:-rotate-2 hover:scale-105 hover:bg-opacity-100 hover:stroke-black hover:shadow-xl hover:shadow-gray-300/20 dark:bg-gray-100 dark:bg-opacity-10 dark:stroke-gray-300 dark:hover:bg-white dark:hover:stroke-black">
               <svg width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M16 22.0268V19.1568C16.0375 18.68 15.9731 18.2006 15.811 17.7506C15.6489 17.3006 15.3929 16.8902 15.06 16.5468C18.2 16.1968 21.5 15.0068 21.5 9.54679C21.4997 8.15062 20.9627 6.80799 20 5.79679C20.4558 4.5753 20.4236 3.22514 19.91 2.02679C19.91 2.02679 18.73 1.67679 16 3.50679C13.708 2.88561 11.292 2.88561 8.99999 3.50679C6.26999 1.67679 5.08999 2.02679 5.08999 2.02679C4.57636 3.22514 4.54413 4.5753 4.99999 5.79679C4.03011 6.81549 3.49251 8.17026 3.49999 9.57679C3.49999 14.9968 6.79998 16.1868 9.93998 16.5768C9.61098 16.9168 9.35725 17.3222 9.19529 17.7667C9.03334 18.2112 8.96679 18.6849 8.99999 19.1568V22.0268"
@@ -805,7 +694,7 @@
 
           <a href="https://twitter.com/marrf_tech">
             <div
-              class="rounded-lg bg-blue-300 fill-blue-500 stroke-blue-500 p-2 transition-all hover:rotate-2 hover:scale-105 hover:bg-opacity-100 hover:fill-blue-500 hover:shadow-xl hover:shadow-blue-300/20 dark:bg-blue-100 dark:bg-opacity-10 dark:fill-transparent dark:hover:bg-blue-300 dark:hover:fill-blue-500">
+              class="rounded-lg bg-blue-300 fill-blue-500 stroke-blue-500 p-2  hover:rotate-2 hover:scale-105 hover:bg-opacity-100 hover:fill-blue-500 hover:shadow-xl hover:shadow-blue-300/20 dark:bg-blue-100 dark:bg-opacity-10 dark:fill-transparent dark:hover:bg-blue-300 dark:hover:fill-blue-500">
               <svg width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M23 3.01006C23 3.01006 20.9821 4.20217 19.86 4.54006C19.2577 3.84757 18.4573 3.35675 17.567 3.13398C16.6767 2.91122 15.7395 2.96725 14.8821 3.29451C14.0247 3.62177 13.2884 4.20446 12.773 4.96377C12.2575 5.72309 11.9877 6.62239 12 7.54006V8.54006C10.2426 8.58562 8.50127 8.19587 6.93101 7.4055C5.36074 6.61513 4.01032 5.44869 3 4.01006C3 4.01006 -1 13.0101 8 17.0101C5.94053 18.408 3.48716 19.109 1 19.0101C10 24.0101 21 19.0101 21 7.51006C20.9991 7.23151 20.9723 6.95365 20.92 6.68006C21.9406 5.67355 23 3.01006 23 3.01006Z"
