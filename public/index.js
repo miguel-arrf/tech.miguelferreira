@@ -1,11 +1,10 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-gsap.registerPlugin();
 
 // create the scrollSmoother before your scrollTriggers
-ScrollSmoother.create({
-  smooth: 0.8,               // how long (in seconds) it takes to "catch up" to the native scroll position
-  smoothTouch: 0.5,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-});
+/*ScrollSmoother.create({
+  smooth: 0.2,               // how long (in seconds) it takes to "catch up" to the native scroll position
+  smoothTouch: true,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+});*/
 
 /*ScrollTrigger.normalizeScroll({
   allowNestedScroll: true, 
@@ -18,7 +17,6 @@ ScrollSmoother.create({
 
 /// Horizontal section scroll:
 let horizontalSection = document.querySelector('.horizontal')
-console.log("horizontalSection.scrollWidth: ", horizontalSection.scrollWidth)
 
 
 
@@ -39,13 +37,5 @@ gsap.to('.horizontal', {
       ease: "power1.inOut"
     },
   },
-  ease: "power1.inOut" // Add this line 👍
 })
 
-
-
-/*const locoScroll = new LocomotiveScroll({
-  el: document.querySelector(".scrollContainer"),
-  smooth: true,
-  direction: "vertical"
-}) */
