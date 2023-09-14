@@ -32,7 +32,6 @@ gsap.to('.horizontal', {
     end: '+=3000px',
     pin: '.containerHorizontal',
     scrub: true,
-    markers: true,
     delay: 3,
     invalidateOnRefresh: true,
     snap: {
