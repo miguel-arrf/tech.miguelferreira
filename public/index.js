@@ -1,6 +1,12 @@
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 gsap.registerPlugin();
 
+ScrollSmoother.create({
+  wrapper: '.smoothWrapper',
+  content: '.smoothContent',
+  smooth: 1.5,
+  effects: true
+})
 
 /*ScrollTrigger.normalizeScroll({
   allowNestedScroll: true, 
