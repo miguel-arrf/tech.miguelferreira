@@ -1,9 +1,10 @@
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger);//, ScrollSmoother);
 
 // create the scrollSmoother before your scrollTriggers
 
 
-function myFunction(x) {
+
+/*function myFunction(x) {
   if (x.matches) {
     ScrollSmoother.create({
       smooth: 0.8,               // how long (in seconds) it takes to "catch up" to the native scroll position
@@ -20,7 +21,7 @@ function myFunction(x) {
 // match media if the screen width is at least 600px:
 var x = window.matchMedia("(min-width: 600px)")
 myFunction(x)
-x.addListener(myFunction)
+x.addListener(myFunction)*/
 
 /*ScrollTrigger.normalizeScroll({
   allowNestedScroll: true, 
@@ -35,6 +36,37 @@ let horizontalSection = document.querySelector('.horizontal')
 
 
 
+
+
+
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('#smooth-wrapper'),
+  smooth: true,
+  tabled: {smooth: true},
+  smartphone: {smooth: true},
+})
+
+scroll.on("scroll", () => {
+  console.log("locomoative on scrolll");
+  try {
+    ScrollTrigger.update();
+  } catch {
+    console.log("issue updating scrolltrigger")
+  }
+});
+
+ScrollTrigger.scrollerProxy('#smooth-wrapper', {
+  scrollTop(value) {
+    return arguments.length ? scroll.scrollTo(value, 0, 0) : scroll.scroll.instance.scroll.y
+  },
+  getBoundingClientRect()  {
+return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight}
+  },
+  pinType: document.querySelector('#smooth-wrapper').style.transform ? "transform" : "fixed"
+});
+
+ScrollTrigger.addEventListener("refresh", () => scroll.update());
+
 gsap.to('.horizontal', {
   x: () => horizontalSection.scrollWidth * -1,
   xPercent: 100,
@@ -42,6 +74,7 @@ gsap.to('.horizontal', {
     trigger: '.horizontal',
     start: 'center center',
     end: '+=3000px',
+    scroller: "#smooth-wrapper",
     pin: '.containerHorizontal',
     scrub: true,
     delay: 3,
@@ -55,4 +88,3 @@ gsap.to('.horizontal', {
   },
   ease: "power1.inOut"
 })
-
