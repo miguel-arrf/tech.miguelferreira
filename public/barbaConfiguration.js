@@ -61,8 +61,74 @@ function init() {
     barba.wrapper.classList.add("is-animating");
   });
 
+  // init LocomotiveScroll on page load
+let locoScroll = new LocomotiveScroll({
+  el: document.querySelector('[data-scroll-container]'),
+  smooth: true
+});
+
+// STARTS LOCOMOTIVE MIDDLEMAN
+// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+locoScroll.on("scroll", ScrollTrigger.update);
+// tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
+    ScrollTrigger.scrollerProxy(".scrollContainer", {
+        scrollTop(value) {
+          return arguments.length ? locoScroll.scrollTo(value, 0, 0) :    locoScroll.scroll.instance.scroll.y;
+  }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+  getBoundingClientRect() {
+    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+  },
+  // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+  pinType: document.querySelector(".scrollContainer").style.transform ? "transform" : "fixed"
+});
+
+/// Horizontal section scroll:
+let horizontalSection = document.querySelector('.horizontal')
+console.log("horizontalSection.scrollWidth: ", horizontalSection.scrollWidth)
+
+
+/*let tl = gsap.timeline({defaults:{ease:"none"}})
+  .to(".horizontal", {
+    x: () => horizontalSection.scrollWidth * -1,
+  xPercent: 100
+  })
+
+ScrollTrigger.create({
+  trigger:".horizontal",
+  start: 'center center',
+  end: '+=3000px',
+  pin: '.containerHorizontal',
+  scrub:true,
+  markers: true
+})*/
+
+gsap.to('.horizontal', {
+  x: () => horizontalSection.scrollWidth * -1,
+  xPercent: 100,
+  scrollTrigger: {
+    trigger: '.horizontal',
+    start: 'center center',
+    end: '+=3000px',
+    pin: '.containerHorizontal',
+    scrub: true,
+    scroller:".scrollContainer",
+    markers: true,
+    delay: 3,
+    invalidateOnRefresh: true,
+    snap: {
+      snapTo: 0.1,
+      duration: 0.02,
+      ease: "power1.inOut"
+    },
+  },
+  ease: "power1.inOut" // Add this line 👍
+});
+console.log("saimos daqui")
+// ENDS LOCOMOTIVE MIDDLEMAN
+
   // do something after the transition finishes
   barba.hooks.after((data) => {
+    locoScroll.update();
     //console.log("here!");
     document.querySelector("html").classList.remove("is-transitioning");
 
@@ -78,6 +144,7 @@ function init() {
   barba.hooks.enter((data) => {
     window.scrollTo(0, 0);
   });
+
 
   barba.init({
     sync: true,
@@ -164,7 +231,6 @@ function init() {
         namespace: "home",
         async beforeEnter({ next }) {
           gsap.globalTimeline.clear();
-          ScrollTrigger.getAll().forEach((t) => t.kill());
           gsap.globalTimeline.clear();
           // Script URLs to load
           //First let's check if the scripts are already there or not, and, if they are, let's remove them

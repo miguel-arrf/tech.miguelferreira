@@ -49,8 +49,6 @@
     rel="stylesheet" />
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <!--<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.js"></script>
-  -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/ScrollTrigger.min.js"></script>
@@ -67,8 +65,12 @@
   <link rel="stylesheet" href="https://use.typekit.net/fxx5dng.css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.js"
-    id="external-js"></script>
+  <script src="
+  https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
+  " id="external-js"></script>
+  <link href="
+  https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
+  " rel="stylesheet">
 </head>
 
 <body class="dark:bg-black bg-gray-100 transition-all " data-barba="wrapper">
@@ -186,7 +188,7 @@ div.section3 {
 
 
 
-
+  <div data-scroll-container class="scrollContainer">
   <main class=" transition-all dark:bg-black bg-gray-100 transition-all md:px-10 lg:px-0" data-barba="container"
     data-barba-namespace="home">
 
@@ -1039,24 +1041,17 @@ div.section3 {
 
 
   </main>
-
+</div>
 
   <script id="main-script-1" type="module" src="index.js"></script>
   <script id="main-script-2" src="newIndex.js"></script>
   <script id="main-script-3" type="module" src="indexJS.js"></script>
   <script>
-    setSectionAnimation();
   </script>
 
 
 </body>
 <script src="barbaConfiguration.js"></script>
-
-
-
-
-
-
 
 
 </html>

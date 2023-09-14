@@ -1,6 +1,8 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin();
 
+
+
 function circles() {
   gsap.to("#secondCircle", {
     duration: 10,
@@ -75,30 +77,17 @@ gsap.fromTo(
   }
 );
 
-console.log("olá!");
 
-const supabase_url = "https://hgmiwkjjabqohfwocxsq.supabase.co";
-const supabase_key =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhnbWl3a2pqYWJxb2hmd29jeHNxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzA5MzQzMTIsImV4cCI6MTk4NjUxMDMxMn0.SvAbSPzUID67IZijAJK3ed6A3Bjl96qX3ds2LXIo39c";
 
-var supabase = supabase.createClient(supabase_url, supabase_key);
-console.log("supabase: ", supabase);
-
-const fetchTodos = async () => {
-  const { data, error } = await supabase.from("general").select(); // gets the data from supabase
-
-  if (error) console.log("error", error);
-  else console.log(data);
-};
-
-fetchTodos();
 
 
 /// Horizontal section scroll:
 let horizontalSection = document.querySelector('.horizontal')
 console.log("horizontalSection.scrollWidth: ", horizontalSection.scrollWidth)
 
-gsap.to('.horizontal', {
+
+
+/*gsap.to('.horizontal', {
   x: () => horizontalSection.scrollWidth * -1,
   xPercent: 100,
   scrollTrigger: {
@@ -117,4 +106,13 @@ gsap.to('.horizontal', {
     },
   },
   ease: "power1.inOut" // Add this line 👍
-})
+})*/
+
+
+
+/*const locoScroll = new LocomotiveScroll({
+  el: document.querySelector(".scrollContainer"),
+  smooth: true,
+  direction: "vertical"
+}) */
+
