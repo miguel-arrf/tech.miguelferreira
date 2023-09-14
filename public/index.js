@@ -103,11 +103,18 @@ gsap.to('.horizontal', {
   xPercent: 100,
   scrollTrigger: {
     trigger: '.horizontal',
-    start: 'center center -=200px',
+    start: 'center center',
     end: '+=3000px',
     pin: '.containerHorizontal',
     scrub: true,
     markers: true,
+    delay: 3,
     invalidateOnRefresh: true,
-  }
+    snap: {
+      snapTo: 0.1,
+      duration: 0.02,
+      ease: "power1.inOut"
+    },
+  },
+  ease: "power1.inOut" // Add this line 👍
 })
