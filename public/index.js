@@ -40,7 +40,12 @@ const scroll = new LocomotiveScroll({
   smartphone: {smooth: true},
 })
 
-console.log("HERE I AM YEYE")
+  /* update scroll (height) when all images are loaded */
+  imagesLoaded(document.querySelector('#smooth-wrapper'), { background: true }, function () {
+    scroll.update();
+    console.log("IMAGES ARE LOADED HUASHUASHUAS");
+  });
+
 
 scroll.on("scroll", () => {
   console.log("locomoative on scrolll");
@@ -79,11 +84,11 @@ gsap.to('.horizontal', {
     delay: 3,
     markers: false,
     invalidateOnRefresh: true,
-    snap: {
+    /*snap: {
       snapTo: 0.1,
       duration: 0.02,
       ease: "power1.inOut"
-    },
+    },*/
   },
   ease: "power1.inOut"
 })

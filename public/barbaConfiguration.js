@@ -220,6 +220,7 @@ function init() {
         },
         async afterEnter({ next }) {
           console.log("Barba.JS setting afterEnter animations");
+          
           textDisplacementAnimation();
           WWDCText();
 

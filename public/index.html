@@ -70,6 +70,8 @@
 
   <script src="locomotive-scroll.min.js"></script>
 
+  <!-- Are images loaded yet? -->
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 
 </head>
 
@@ -372,18 +374,32 @@
                   <!-- <div class="ribbon ribbon-top-right"><span>Apple Award</span></div>-->
                   <div class="overflow-hidden">
                     <!-- Header -->
-                    <div class="flex flex-row items-center gap-4 px-8 pt-8 pb-8 text-white">
-                      <div class="flex flex-row gap-4 justify-between w-full">
-                        <div class="flex flex-col gap-4">
+                    <!--<div class="flex flex-row items-center gap-4 px-8 pt-8 pb-8 text-white">
+                      <div class="grid grid-cols-2  lg:flex-row gap-4 justify-between w-full">
+                        <div class="flex flex-row lg:flex-col gap-4 bg-blue-300">
                           <img class="w-16 h-16" src="https://i.imgur.com/9NjvQdd.png" />
                           <div class="font-bold text-red-500">A macOS menu bar app that uses CoreML to remove the background of images and that allow to easily create color selection masks.</div>
                         </div>
                         <img class="object-contain rounded-lg hue-rotate-[120deg]" style="max-height: 300px" src="https://i.imgur.com/lzB2vkr.png"/>
                       </div>
+                    </div>-->
+                    <div class="flex flex-row items-center gap-4 px-8 pt-8 pb-8 text-white">
+                      <div class="grid lg:grid-cols-2 grid-cols-1 md:grid-cols-1 grid-flow-row lg:flex-row gap-4 justify-between w-full">
+                        <div class="flex flex-row lg:flex-col gap-4">
+                          <img class="w-16 h-16" src="https://i.imgur.com/9NjvQdd.png" />
+                          <div class="font-bold text-red-500">A macOS menu bar app that uses CoreML to remove the background of images and that allow to easily create color selection masks.</div>
+                        </div>
+                        <div class="w-full flex rounded-lg   place-content-center ">
+                          <img class=" object-contain rounded-lg hue-rotate-[120deg]" style="max-height: 300px" src="https://i.imgur.com/lzB2vkr.png"/>
+                        </div>
+                      </div>
                     </div>
+
+
                   </div>
                 </div>
                 <!-- End Halo Build card -->
+                
   
                 <!-- Halo Build card -->
                 <div style="transform: translate3d(0,0,0);
