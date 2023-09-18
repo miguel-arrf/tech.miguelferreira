@@ -77,7 +77,7 @@ gsap.to('.horizontal', {
     pin: '.containerHorizontal',
     scrub: true,
     delay: 3,
-    markers: true,
+    markers: false,
     invalidateOnRefresh: true,
     snap: {
       snapTo: 0.1,
