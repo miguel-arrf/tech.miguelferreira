@@ -175,16 +175,13 @@ function init() {
           const bottomDOM = document.getElementsByTagName("body")[0];
           const newScript_1 = document.createElement("script");
           const newScript_2 = document.createElement("script");
-          const newScript_3 = document.createElement("script");
 
           const oldScript_1 = document.getElementById("main-script-1");
           const oldScript_2 = document.getElementById("main-script-2");
-          const oldScript_3 = document.getElementById("main-script-3");
 
           if (
             oldScript_1 != null &&
-            oldScript_2 != null &&
-            oldScript_3 != null
+            oldScript_2 != null
           ) {
             newScript_1.src = "index.js";
             newScript_1.id = "main-script-1";
@@ -194,18 +191,12 @@ function init() {
             newScript_2.id = "main-script-2";
             newScript_2.classList.add(Math.random());
 
-            newScript_3.src = "indexJS.js";
-            newScript_3.id = "main-script-3";
-            newScript_3.classList.add(Math.random());
-            //console.log("THIS IS NOT WORKING PA0444");
 
             oldScript_1.remove();
             oldScript_2.remove();
-            oldScript_3.remove();
 
             bottomDOM.appendChild(newScript_1);
             bottomDOM.appendChild(newScript_2);
-            bottomDOM.appendChild(newScript_3);
 
             ScrollTrigger.clearScrollMemory();
             ScrollTrigger.refresh();
@@ -218,33 +209,24 @@ function init() {
             newScript_2.id = "main-script-2";
             newScript_2.classList.add(Math.random());
 
-            newScript_3.src = "indexJS.js";
-            newScript_3.id = "main-script-3";
-            newScript_3.classList.add(Math.random());
             //console.log("THIS IS NOT WORKING PA0444");
 
             bottomDOM.appendChild(newScript_1);
             bottomDOM.appendChild(newScript_2);
-            bottomDOM.appendChild(newScript_3);
 
             ScrollTrigger.clearScrollMemory();
             ScrollTrigger.refresh();
           }
         },
         async afterEnter({ next }) {
-          //console.log("aqui cheguei a caminho de viseu!");
+          console.log("Barba.JS setting afterEnter animations");
           textDisplacementAnimation();
           WWDCText();
 
           //console.log("mas aqui já nao huwhuh");
           setPinAnimation();
-          //console.log("THIS IS NOT WORKING PA1");
-
-          setSectionAnimation();
-          //console.log("THIS IS NOT WORKING PA2");
-
+          //setSectionAnimation();
           circles();
-          //console.log("THIS IS NOT WORKING PA3");
         }
       }
     ],

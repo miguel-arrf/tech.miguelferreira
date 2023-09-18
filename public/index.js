@@ -2,8 +2,6 @@ gsap.registerPlugin(ScrollTrigger);//, ScrollSmoother);
 
 // create the scrollSmoother before your scrollTriggers
 
-
-
 /*function myFunction(x) {
   if (x.matches) {
     ScrollSmoother.create({
@@ -34,17 +32,15 @@ x.addListener(myFunction)*/
 /// Horizontal section scroll:
 let horizontalSection = document.querySelector('.horizontal')
 
-
-
-
-
-
 const scroll = new LocomotiveScroll({
   el: document.querySelector('#smooth-wrapper'),
   smooth: true,
-  tabled: {smooth: true},
+  getDirection: true,
+  tablet: {smooth: true},
   smartphone: {smooth: true},
 })
+
+console.log("HERE I AM YEYE")
 
 scroll.on("scroll", () => {
   console.log("locomoative on scrolll");
@@ -66,7 +62,10 @@ return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight}
 });
 
 ScrollTrigger.addEventListener("refresh", () => scroll.update());
+ScrollTrigger.defaults({ scroller: "#smooth-wrapper" });
+ScrollTrigger.update();
 
+// Sets horizontal container animation
 gsap.to('.horizontal', {
   x: () => horizontalSection.scrollWidth * -1,
   xPercent: 100,
@@ -88,3 +87,148 @@ gsap.to('.horizontal', {
   },
   ease: "power1.inOut"
 })
+
+
+
+// Sets emoji animation:
+gsap.fromTo(
+  ".emojiAnimation",
+  { opacity: 1, rotate: 0 },
+  {
+    scrollTrigger: {
+      trigger: ".emojiAnimation",
+      markers: false,
+      start: "20px 80%",
+      scrub: 1,
+      toggleActions: "play none none none",
+      scroller: "#smooth-wrapper"
+    },
+
+    opacity: 1,
+    duration: 0.3,
+    rotate: "50deg"
+  }
+);
+
+gsap.fromTo(
+  ".emojiAnimation1",
+  { opacity: 1, rotate: "0deg" },
+  {
+    scrollTrigger: {
+      trigger: ".emojiAnimation1",
+      markers: false,
+      start: "20px 80%",
+      scrub: 1,
+      toggleActions: "play none none none",
+      scroller: "#smooth-wrapper"
+    },
+
+    opacity: 1,
+    duration: 0.3,
+    rotate: "50deg"
+  }
+);
+
+
+// Sets Pin emoji animation:
+function setPinAnimation() {
+  gsap.fromTo(
+    ".pinAnimation",
+    { top: "0.5rem", marginTop: "0rem" },
+    {
+      scrollTrigger: {
+        trigger: ".pinAnimation",
+        start: "top center",
+        scrub: 1,
+        markers: false,
+        pin: false,
+        scroller: "#smooth-wrapper"
+      },
+      marginTop: "-2.5rem",
+      top: "100%",
+      opacity: 1
+    }
+  );
+}
+
+setPinAnimation();
+
+
+// Sets Bye animation:
+
+
+gsap.fromTo(
+  ".byeAnimation",
+  { opacity: 0.5 },
+  {
+    scrollTrigger: {
+      trigger: ".byeAnimation",
+      start: "bottom bottom",
+      markers: false,
+      end: "bottom bottom",
+      scroller: "#smooth-wrapper"
+    },
+    opacity: 1
+  }
+);
+
+
+
+// Sets section animations:
+function setSectionAnimation() {
+  gsap.utils.toArray("section").forEach((section, index) => {
+    const w = section.querySelector(".wrapper");
+    const [x, xEnd] =
+      index % 2
+        ? ["100%", (w.scrollWidth - section.offsetWidth) * -1]
+        : [w.scrollWidth * -1, 0];
+    gsap.fromTo(
+      w,
+      { x },
+      {
+        x: xEnd,
+        scrollTrigger: {
+          trigger: section,
+          markers: false,
+          end: "bottom 50%",
+          scrub: 0.5,
+          scroller: "#smooth-wrapper"
+        }
+      }
+    );
+  });
+
+  const section = document.querySelector(".coolSection");
+  const w = section.querySelector(".wrapper");
+
+  const [x, xEnd] = ["100%", (w.scrollWidth - section.offsetWidth) * -1];
+  gsap.fromTo(
+    w,
+    { x },
+    {
+      x: xEnd,
+      scrollTrigger: {
+        trigger: section,
+        markers: false,
+        start: "bottom bottom",
+        scrub: 0.5,
+        scroller: "#smooth-wrapper"
+      }
+    }
+  );
+
+}
+
+
+setSectionAnimation();
+
+
+
+
+function scrollToProjects() {
+  scroll.stop();
+  scroll.scrollTo(document.querySelector("#projectsSection"));
+}
+
+ScrollTrigger.config({ignoreMobileResize: true});
+
