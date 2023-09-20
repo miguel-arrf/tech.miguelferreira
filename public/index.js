@@ -30,6 +30,22 @@ x.addListener(myFunction)*/
   type: "touch,wheel,pointer", // now the page will be drag-scrollable on desktop because "pointer" is in the list 
 });*/
 
+function disableScroll() {
+  // Get the current page scroll position
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+
+      // if any scroll is attempted, set this to the previous value
+      window.onscroll = function() {
+          window.scrollTo(scrollLeft, scrollTop);
+      };
+}
+
+function enableScroll() {
+  window.onscroll = function() {};
+}
+
+disableScroll();
 
 let welcomeLoader = document.querySelector(".welcomeLoader");
 // Uses gsap to put opacity to 0
@@ -40,6 +56,7 @@ gsap.to(welcomeLoader, {
   ease: "power1.inOut",
   onComplete: () => {
     welcomeLoader.style.display = "none";
+    enableScroll();
   }
 });
 
