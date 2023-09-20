@@ -115,6 +115,14 @@
           visibility: hidden;
           opacity: 0;
         }
+
+        .welcomeLoader {
+          position: fixed;
+          width: 100vw;
+          height: 100vh;
+          pointer-events: none;
+          z-index: 100;
+        }
     
     
         .myText {
@@ -188,6 +196,10 @@
     
       <div class="loader dark:bg-darkGray bg-gray-100  flex items-center text-center justify-center">
         <div id="loaderText" class="p-10  dark:text-white text-black text-6xl font-extrabold">Home</div>
+      </div>
+
+      <div class="welcomeLoader dark:bg-darkGray bg-gray-100  flex items-center text-center justify-center">
+        <div id="loaderTextWelcomeLoader" class="p-10  dark:text-white text-black text-6xl font-extrabold">Miguel Ferreira</div>
       </div>
     
     
@@ -1074,9 +1086,7 @@
   -->
 
 <script>
-   
-
-console.log("done")
+console.log("Index.html reached script section")
 </script>
 
 

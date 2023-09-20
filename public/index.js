@@ -1,5 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);//, ScrollSmoother);
 
+console.log("index.js");
+
 // create the scrollSmoother before your scrollTriggers
 
 /*function myFunction(x) {
@@ -29,6 +31,26 @@ x.addListener(myFunction)*/
 });*/
 
 
+let welcomeLoader = document.querySelector(".welcomeLoader");
+// Uses gsap to put opacity to 0
+gsap.to(welcomeLoader, {
+  opacity: 0,
+  duration: 1,
+  delay: 1,
+  ease: "power1.inOut",
+  onComplete: () => {
+    welcomeLoader.style.display = "none";
+  }
+});
+
+gsap.to(document.querySelector("#loaderTextWelcomeLoader"), {
+  opacity: 0,
+  duration: 1,
+  delay: 0.5,
+  ease: "power1.inOut",
+
+});
+
 /// Horizontal section scroll:
 let horizontalSection = document.querySelector('.horizontal')
 
@@ -43,12 +65,11 @@ const scroll = new LocomotiveScroll({
   /* update scroll (height) when all images are loaded */
   imagesLoaded(document.querySelector('#smooth-wrapper'), { background: true }, function () {
     scroll.update();
-    console.log("IMAGES ARE LOADED HUASHUASHUAS");
+    console.log("Images loadeded");
   });
 
 
 scroll.on("scroll", () => {
-  console.log("locomoative on scrolll");
   try {
     ScrollTrigger.update();
   } catch {
