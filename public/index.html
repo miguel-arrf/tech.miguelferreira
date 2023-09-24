@@ -75,8 +75,8 @@
 
 </head>
 
-<body class="smoothWrapper dark:bg-black bg-gray-100 transition-all " data-barba="wrapper">
-  <div data-scroll-container id="smooth-wrapper" data-scroll-speed="3">
+<body class=" dark:bg-black bg-gray-100 transition-all " data-barba="wrapper">
+  <div  style="perspective: 1px;" id="smooth-wrapper">
     <div id="smooth-content">
       <style>
         .customLargeSectionBackground {
@@ -168,6 +168,8 @@
           overflow: hidden;
           transition: max-height 0.2s ease-out;
         }
+
+        
       </style>
     
     <!-- horizontal scroll section style -->
@@ -203,7 +205,6 @@
       </div>
     
     
-    <div class="smooth-scroll">
       <main class="smoothContent transition-all dark:bg-black bg-gray-100 transition-all md:px-10 lg:px-0" data-barba="container"
       data-barba-namespace="home">
   
@@ -277,7 +278,7 @@
     <div class="containerHorizontal" >
       <!-- STARTS COMPLETO AND BLINKY -->
       <div class="mt-0 p-6 grid grid-cols-10">
-        <div id="myCanva"
+        <div id="myCanva_1"
           class="z-20 h-full relative col-span-10 lg:col-start-2 lg:col-span-8 2xl:col-start-3 2xl:col-span-6">
   
           <!-- First row of apps -->
@@ -334,7 +335,7 @@
                   <div class="text-2xl font-bold">Blinky</div>
                 </div>
                 <!-- Subtitle -->
-                <div class="px-8 pb-14 pt-4 text-white font-bold">Blinky is an iPadOS app made for ALS patients. The app allows for
+                <div  class="px-8 pb-14 pt-4 text-white font-bold">Blinky is an iPadOS app made for ALS patients. The app allows for
                   ALS patients to regain part of the communication abilities. The app is controlled using only eyes and
                   forehead movements.</div>
                 <img class="z-20 px-8 pb-14" src="https://i.imgur.com/sbxowzc.png" />
@@ -455,7 +456,7 @@
   
       <!-- INTERACTIONS SECTION -->
       <div class="mt-0 p-6 grid grid-cols-10" >
-        <div id="myCanva"
+        <div id="myCanva_2"
           class="z-20 h-full relative col-span-10 lg:col-start-2 lg:col-span-8 2xl:col-start-3 2xl:col-span-6">
   
           <div  class="section section3 bg-zinc-200 rounded-xl  border-4 border-zinc-300 shadow-2xl shadow-gray-500/50 dark:shadow-none">
@@ -529,7 +530,7 @@
       <!-- ENDS INTERACTIONS SECTION -->
   
       <div class="mt-0 p-6 grid grid-cols-10">
-        <div id="myCanva"
+        <div id="myCanva_3"
           class=" bg-purple-300/[.9] dark:bg-white/[.05] shadow-2xl shadow-gray-500/50 dark:shadow-none z-20 h-full rounded-2xl overflow-hidden relative col-span-10 lg:col-start-2 lg:col-span-8 2xl:col-start-3 2xl:col-span-6">
           <!-- style="background-color: rgba(255, 255, 255, 0.05);"-->
   
@@ -1071,7 +1072,6 @@
     -->
   
     </main>
-    </div>
     
     
     </div>

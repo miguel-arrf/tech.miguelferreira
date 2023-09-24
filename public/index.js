@@ -263,7 +263,7 @@ function setSectionAnimation() {
 }
 
 
-setSectionAnimation();
+//setSectionAnimation();
 
 
 
