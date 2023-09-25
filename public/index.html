@@ -283,11 +283,23 @@
   
           <!-- First row of apps -->
           <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+           
             <!-- Completo card -->
             <div style="background: linear-gradient(180deg, #151614 0%, #30322E 100%); max-height: 80vh"
               class="completo_card cols-span-1 overflow-clip flex flex-col justify-between rounded-2xl border-4 border-gray-200 px-8 pt-8 dark:border-2 dark:border-zinc-800">
               <!-- Header -->
-              <div class="flex flex-row items-center gap-4 text-white">
+              <div class="flex flex-row gap-4 pb-4">
+                <div class="rounded-full bg-white/20 font-semibold px-2">
+                  SwiftUI
+                </div>
+                <div class="rounded-full bg-white/20 font-semibold px-2">
+                  FamilyControls API
+                </div>
+                <div class="rounded-full bg-white/20 font-semibold px-2">
+                  WidgetKit
+                </div>
+              </div>
+              <div class="flex flex-row items-center gap-4 pt-4 text-white">
                 <div>
                   <img class="w-16" src="https://i.imgur.com/duJGKIb.png" />
                 </div>
@@ -295,8 +307,7 @@
               </div>
               <!-- Subtitle -->
               <div class="flex flex-col gap-6 pb-10 pt-4 text-white font-bold">
-                Completo allows anyone to regain control of their lives. By linking apps to tasks and allowing you to
-                block entire applications...
+                Completo allows anyone to regain control of their time. Either by linking apps to tasks, blocking them until the task is completed, or by blocking entire applications as soon as you enter them, making you wait a small amount of time until it is available.
   
                 <div>
                   <!--<video width="320" height="240" autoplay controls>
@@ -305,8 +316,8 @@
                     </video>-->
   
                   <div
-                    class="opacity-20 flex w-fit flex-row rounded-full bg-white py-1 pl-3 pr-1 text-sm font-semibold uppercase text-black">
-                    See more
+                    class="flex w-fit flex-row rounded-full bg-white py-1 pl-3 pr-1 text-sm font-semibold uppercase text-zinc-500 group transition-all  hover:-rotate-1">
+                    <a href="https://www.completoapp.com/" class="group-hover:text-black group-hover:font-bold transition-all">See more</a>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
                       <path fill-rule="evenodd"
                         d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
@@ -328,19 +339,26 @@
               <!-- <div class="ribbon ribbon-top-right"><span>Apple Award</span></div>-->
               <div class="h-full overflow-hidden rounded-2xl">
                 <!-- Header -->
-                <div class="flex flex-row items-center gap-4 px-8 pt-8 text-white">
+                <div class="flex flex-row gap-4 pb-4 pt-8 pl-8">
+                  <div class="rounded-full bg-white/20 font-semibold px-2">
+                    SwiftUI
+                  </div>
+                  <div class="rounded-full bg-white/20 font-semibold px-2">
+                    Face Recognition
+                  </div>
+                </div>
+                <div class="flex flex-row items-center gap-4 px-8 pt-4 text-white">
                   <div>
                     <img class="w-16" src="https://i.imgur.com/6biv9sy.png" />
                   </div>
                   <div class="text-2xl font-bold">Blinky</div>
                 </div>
                 <!-- Subtitle -->
-                <div  class="px-8 pb-14 pt-4 text-white font-bold">Blinky is an iPadOS app made for ALS patients. The app allows for
-                  ALS patients to regain part of the communication abilities. The app is controlled using only eyes and
-                  forehead movements.</div>
+                <div  class="px-8 pb-14 pt-4 text-white font-bold">Blinky is an iPadOS app made for ALS patients. The app allows ALS patients to regain a part of their communication abilities. The app is controlled using only eyes and forehead movements.
+                </div>
                 <img class="z-20 px-8 pb-14" src="https://i.imgur.com/sbxowzc.png" />
   
-                <img class="absolute bottom-0 z-10 h-full w-full rounded-2xl object-fill mix-blend-overlay"
+                <img class="pointer-events-none	 absolute bottom-0 z-10 h-full w-full rounded-2xl object-fill mix-blend-overlay"
                   src="https://i.imgur.com/YtkR0LX.png" />
   
                 <div class="absolute bottom-0 z-40 flex w-full justify-center p-4 pb-4 text-center font-bold text-white">
@@ -359,11 +377,31 @@
               <div
                 class="bg-gradient-to-b from-blue-100 to-blue-300 row-span-3 flex h-full flex-col justify-between items-start rounded-2xl border-4 border-blue-200 px-8 pt-8 text-left dark:border-2 dark:border-blue-800">
                 <!-- Header -->
-                <div class="flex flex-row items-center gap-4 text-white">
-                  <div>
-                    <img class="w-16" src="https://i.imgur.com/RNr5ESA.png" />
+              
+
+                <div class="flex flex-col">
+                  <div class="flex flex-row gap-4 pb-4 text-blue-600">
+                    <div class="rounded-full bg-blue-600/20 font-semibold px-2">
+                      SwiftUI
+                    </div>
+                    <div class="rounded-full bg-blue-600/20 font-semibold px-2">
+                      Prompt Engineering
+                    </div>
+                    <div class="rounded-full bg-blue-600/20 font-semibold px-2">
+                      ChatGPT
+                    </div>
+                    <div class="rounded-full bg-blue-600/20 font-semibold px-2">
+                      FastAPI
+                    </div>
                   </div>
-                  <div class="text-4xl font-bold text-blue-600">Nemo</div>
+  
+                  <div class="flex flex-row items-center gap-4 text-white">
+                    
+                    <div>
+                      <img class="w-16" src="https://i.imgur.com/RNr5ESA.png" />
+                    </div>
+                    <div class="text-4xl font-bold text-blue-600">Nemo</div>
+                  </div>
                 </div>
                 <!-- Subtitle -->
                 <div class="flex flex-col gap-6 pb-10 pt-4 text-blue-900 items-start">
@@ -387,6 +425,17 @@
                   <!-- <div class="ribbon ribbon-top-right"><span>Apple Award</span></div>-->
                   <div class="overflow-hidden">
                     <!-- Header -->
+                    <div class="flex flex-row gap-4 pt-8 px-8 text-red-200">
+                      <div class="rounded-full bg-red-400/20 font-semibold px-2">
+                        SwiftUI
+                      </div>
+                      <div class="rounded-full bg-red-400/20 font-semibold px-2">
+                        AppKIT
+                      </div>
+                      <div class="rounded-full bg-red-400/20 font-semibold px-2">
+                        CoreML
+                      </div>
+                    </div>
                     <!--<div class="flex flex-row items-center gap-4 px-8 pt-8 pb-8 text-white">
                       <div class="grid grid-cols-2  lg:flex-row gap-4 justify-between w-full">
                         <div class="flex flex-row lg:flex-col gap-4 bg-blue-300">
@@ -422,6 +471,17 @@
                   <!-- <div class="ribbon ribbon-top-right"><span>Apple Award</span></div>-->
                   <div class="overflow-hidden">
                     <!-- Header -->
+                    <div class="flex flex-row gap-4 pt-8 px-8 text-yellow-600">
+                      <div class="rounded-full bg-yellow-500/20 font-semibold px-2">
+                        SwiftUI
+                      </div>
+                      <div class="rounded-full bg-yellow-500/20 font-semibold px-2">
+                        AppKIT
+                      </div>
+                      <div class="rounded-full bg-yellow-500/20 font-semibold px-2">
+                        SFSymbols
+                      </div>
+                    </div>
                     <div class="flex flex-row items-center gap-4 px-8 pt-8 text-white">
                       <div>
                         <img class="w-16" src="https://i.imgur.com/molwEJj.png" />
@@ -430,7 +490,7 @@
                     </div>
                     <!-- Subtitle -->
                     <div class="font-bold px-8 pb-8 pt-4 text-yellow-800 text-left flex flex-col gap-5">
-                      A beutifully designed Mac menu bar app to easily search and copy SFSymbols icons.
+                      A beautifully designed Mac menu bar app to easily search and copy SFSymbols icons.
   
                       <video class="h-full border-4 border-white object-cover object-right-top rounded-xl" id="bts-2023"
                         autoplay="" loop="" data-inline-media="" muted="" preload="auto" aria-hidden="true"
