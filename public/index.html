@@ -208,7 +208,7 @@
       <main class="smoothContent transition-all dark:bg-black bg-gray-100 transition-all md:px-10 lg:px-0" data-barba="container"
       data-barba-namespace="home">
   
-      <a href="blogs/" nextPageText="Blogs"
+      <!--<a href="blogs/" nextPageText="Blogs"
         class="fixed bottom-0 right-0 z-50 m-6 rounded-xl backdrop-blur-2xl bg-zinc-200/50 dark:bg-zinc-700/60 p-4 text-white hover:rotate-1 transition-all hover:scale-105 border border-zinc-300 dark:border-zinc-600">
         <div class="flex gap-3">
           <div
@@ -224,7 +224,7 @@
             <div class="font-bold tracking-tight text-zinc-500 dark:text-white">Read my first blog post!</div>
           </div>
         </div>
-      </a>
+      </a>-->
   
       <div class="text-white p-4 flex justify-center place-items-center gap-3 md:gap-5 flex-wrap">
   
@@ -251,7 +251,7 @@
           Blog
         </a>
   
-        <button onclick="gsap.to(window, {duration: 1, scrollTo: '#aboutSection'});"
+        <button href="#aboutSection" data-scroll-to
           class="text-sm mt-6 font-mono border-2 dark:border-0 border-blue-200 flex flex-row tracking-widest gap-1.5 place-items-center rounded-lg px-1 py-0.5 font-bold text-blue-500 bg-blue-100 bg-opacity-100 dark:bg-opacity-10 transition-all hover:bg-opacity-100 hover:shadow-blue-300/20 hover:shadow-xl hover:scale-105 hover:rotate-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd"
@@ -261,7 +261,7 @@
           What else?
         </button>
   
-        <button onclick="gsap.to(window, {duration:1, scrollTo: '#contacts'});"
+        <button href="#contacts" data-scroll-to
           class="text-sm mt-6 font-mono border-2 dark:border-0 border-orange-200 flex flex-row tracking-widest gap-1.5 place-items-center rounded-lg px-1 py-0.5 font-bold text-yellow-500 bg-yellow-100 bg-opacity-100 dark:bg-opacity-10 transition-all hover:bg-opacity-100 hover:shadow-yellow-300/20 hover:shadow-xl hover:scale-105 hover:rotate-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd"
@@ -527,35 +527,61 @@
                 </div>
               </section>-->
               <section class=" bg-pink-400 rounded-lg h-full" style="aspect-ratio: 1/1; max-width: 80vh">
-                <div class="w-full h-full object-fill overflow-clip rounded-lg shadow-xl border border-2 border-zinc-400">
+                <div class="w-full h-full object-fill overflow-clip rounded-lg shadow-xl border border-4 border-zinc-400">
                   <img class="object-cover w-full h-full" src="https://i.imgur.com/AGqtTu1.png">
                 </div>
               </section>
+             
+              <section class="w-fit rounded-lg h-full">
+                <div class=" h-full object-contain overflow-clip rounded-lg shadow-xl border border-4 border-white">
+                  <!--<img class="object-cover w-full h-full" src="https://i.imgur.com/sOsiARd.png">-->
+                  <video class="h-full object-cover object-right-top" id="bts-2023"
+                  autoplay="" loop="" data-inline-media="" muted="" preload="auto" aria-hidden="true"
+                  data-inline-media-plugins="PlayPauseButton, LoadTimeout" data-load-timeout="5000"
+                  data-inline-media-basepath="/105/media/us/home/2023/7f9f4504-ae23-4873-b01a-8f803990d57f/anim/bts-hero"
+                  src="https://i.imgur.com/VSeY8Vd.mp4" playsinline="">
+                    Your browser does not support the video tag.
+                </video>
+                </div>
+              </section>
               <section class=" bg-pink-400 rounded-lg h-full" style=" aspect-ratio: 1/1; max-height: 80vh">
-                <div class="w-full h-full object-fill overflow-clip rounded-lg shadow-xl border border-2 border-pink-400">
+                <div class="w-full h-full object-fill overflow-clip rounded-lg shadow-xl border border-4 border-pink-400">
                   <img src="https://i.imgur.com/mOzGJOO.jpeg">
                 </div>
               </section>
               <section class=" bg-pink-400 rounded-lg h-full" style=" aspect-ratio: 1/1; max-height: 80vh">
-                <div class="w-full h-full object-fill overflow-clip rounded-lg shadow-xl border border-2 border-blue-600">
+                <div class="w-full h-full object-fill overflow-clip rounded-lg shadow-xl border border-4 border-blue-600">
                   <img class="object-cover w-full h-full" src="https://i.imgur.com/ISgSHAD.png">
                 </div>
               </section>
+
+              <section class="w-fit rounded-lg h-full">
+                <div class=" h-full object-contain overflow-clip rounded-lg shadow-xl border border-4 border-white">
+                  <video class="h-full object-cover object-right-top" id="bts-2023"
+                  autoplay="" loop="" data-inline-media="" muted="" preload="auto" aria-hidden="true"
+                  data-inline-media-plugins="PlayPauseButton, LoadTimeout" data-load-timeout="5000"
+                  data-inline-media-basepath="/105/media/us/home/2023/7f9f4504-ae23-4873-b01a-8f803990d57f/anim/bts-hero"
+                  src=" https://i.imgur.com/XdY9zeB.mp4" playsinline="">
+                    Your browser does not support the video tag.
+                </video>
+                </div>
+              </section>
+
               <section class=" bg-pink-400 rounded-lg h-full" style=" aspect-ratio: 1/1; max-height: 80vh">
-                <div class="w-full h-full object-fill overflow-clip rounded-lg shadow-xl border border-2 border-zinc-300">
+                <div class="w-full h-full object-fill overflow-clip rounded-lg shadow-xl border border-4 border-zinc-300">
                   <img class="object-cover w-full h-full" src="https://i.imgur.com/iAC1zIU.png">
                 </div>
               </section>
               <section class=" bg-pink-400 rounded-lg h-full" style=" aspect-ratio: 1/1; max-height: 80vh">
-                <div class="w-full h-full object-fill overflow-clip rounded-lg shadow-xl border border-2 border-blue-500">
+                <div class="w-full h-full object-fill overflow-clip rounded-lg shadow-xl border border-4 border-blue-500">
                   <img class="object-cover w-full h-full" src="https://i.imgur.com/iptC5PI.png">
                 </div>
               </section>
               <section class=" bg-pink-400 rounded-lg h-full" style=" aspect-ratio: 1/1; max-height: 80vh; max-width: 100%">
-                <div class="w-full h-full object-contain overflow-clip rounded-lg shadow-xl border border-2 border-zinc-400">
+                <div class="w-full h-full object-contain overflow-clip rounded-lg shadow-xl border border-4 border-zinc-400">
                   <img class="object-cover w-full h-full" src="https://i.imgur.com/sOsiARd.png">
                 </div>
-              </section>
+              </section>   
               <!--<section class=" bg-pink-400 rounded-lg h-full" style=" aspect-ratio: 1/1; max-height: 80vh">
                 <div class="w-full h-full">
                   This is a test
@@ -692,7 +718,7 @@
               📍</div>
   
   
-            I'm Miguel Ferreira, and I am currently in the first year of my Master's in Computer Science and Engineering
+            I'm Miguel Ferreira, and I am currently working full-time as a Product Engineer at Unbabel, a YC backed startup, based in Lisbon. I am also finishing my Master's in Computer Science and Engineering
             <span
               class="inline-block text-base px-1 font-bold text-blue-500 bg-blue-100 bg-opacity-100 dark:bg-opacity-10 transition-all hover:bg-opacity-100 hover:shadow-blue-300/20 hover:shadow-xl hover:scale-105 hover:rotate-2 rounded-lg">
               @Instituto Superior Técnico</span>. I've just finished working on a research project <span
@@ -704,8 +730,8 @@
               - Digital Global Unit</span> where I created a framework for measuring corporate ethics in Artificial
             Intelligence models.
   
-            <br /><br />
   
+            <!--
             Now I am looking for a Summer Internship in a dynamic and demanding environment! I would love to work in
             something that could bring together my love for
   
@@ -717,6 +743,7 @@
             <span
               class="inline-block text-base px-1 font-bold text-yellow-500 bg-yellow-100 bg-opacity-100 dark:bg-opacity-10 transition-all hover:bg-opacity-100 hover:shadow-yellow-300/20 hover:shadow-xl hover:scale-105 hover:-rotate-2 rounded-lg">
               Artificial Intelligence</span>
+            -->
           </div>
         </div>
       </div>
